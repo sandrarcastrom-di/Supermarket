@@ -20,8 +20,8 @@ jobs:
       run: |
         ORIGIN_HOST=${{ secrets.DATABRICKS_ORIGIN_HOST }}
         ORIGIN_TOKEN=${{ secrets.DATABRICKS_ORIGIN_TOKEN }}
-        NOTEBOOK_BASE="/Workspace/Users/instructor_datasmartada@outlook.com/source"
-        NOTEBOOKS=("mount_adls_storage" "mount_adls_storage_v1" "Disparador")  # Agrega más según necesitesas
+        NOTEBOOK_BASE="/Workspace/Users/sandrar.castrom@outlook.com/Orders_ETL"
+        NOTEBOOKS=("1. Preparacion" "2.0 Ingest aisle data" "2.1 Ingest departments data" "2.2 Ingest products data" "2.3 Ingest order_products_prior data" "2.4 Ingest order_products_train data" "2.5 Ingest orders data" "3.0 Transform aisle" "3.1 Transform departments" "3.2 Transform products" "3.3 Transform order_products_prior" "3.4 Transform order_products_train" "3.5 Transform orders" "4.0 Load Dim Products" "4.1 Load Dim Customer" "4.2 Load Dim Date" "4.3 Load Dim Time" "4.4 Load Fact Orders")  # Agrega más según necesitesas
 
         mkdir -p notebooks_to_deploy
 
