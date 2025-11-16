@@ -8,6 +8,7 @@
 
 
 
+![Uploading image.png…]()
 
 
 
@@ -287,33 +288,11 @@ Ventas por departamento
 
 Top productos
 
-Recompra vs Popularidad
-
-Órdenes por día y hora
-
-Heatmap Día vs Hora
-
-Explorador transaccional
-
 Archivo recomendado:
 
 powerbi/dashboard_supermarket.pbix
 
-🐛 Troubleshooting
-❌ Columnas salen NULL al leer CSV
 
-Solución: agregar .option("sep", ",")
-(o validar que no existan BOM / archivos ._ ocultos)
-
-❌ Power BI no conecta
-
-Agregar IP al firewall del Azure SQL
-
-Usar formato correcto: servidor,1433
-
-❌ Error ADLS: Permission denied
-
-Validar App Registration + RBAC Storage Blob Data Contributor
 
 👩‍💻 Autora
 <div align="center">
@@ -321,9 +300,3 @@ Sandra Rocío Castro Medina
 
 Ingeniera de Datos | Arquitectura en Azure | Databricks | Power BI
 
-</div>
-📄 Licencia
-
-MIT License
-
-</div>
