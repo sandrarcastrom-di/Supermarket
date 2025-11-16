@@ -556,7 +556,7 @@ jobs:
         job_id=$(echo "$create_response" | jq -r '.job_id')
         
         if [ "$job_id" != "" ] && [ "$job_id" != "null" ]; then
-          echo "✅ Workflow 'WF_ADB' creado exitosamente con ID: $job_id"
+          echo "✅ Workflow 'WF_Supermarket' creado exitosamente con ID: $job_id"
           
           # Obtener detalles del workflow creado
           workflow_details=$(curl -s -X GET \
@@ -575,7 +575,7 @@ jobs:
       run: |
         DEST_HOST=${{ secrets.DATABRICKS_DEST_HOST }}
         DEST_TOKEN=${{ secrets.DATABRICKS_DEST_TOKEN }}
-        WORKFLOW_NAME="WF_ADB"
+        WORKFLOW_NAME="WF_Supermarket"
         
         echo "🔍 Validando la configuración del workflow creado..."
         
@@ -741,12 +741,28 @@ jobs:
         echo "🎉 ¡Despliegue y ejecución completados exitosamente!"
         echo ""
         echo "📊 Resumen:"
-        echo "✅ Notebooks desplegados: ntbk_1, ntbk_2"
-        echo "✅ Workflow creado: WF_ADB"
+        echo "✅ Notebooks desplegados: 1. Preparacion, 2.0 Ingest aisle data, 2.1 Ingest departments data, 2.2 Ingest products data, 2.3 Ingest order_products_prior data, 2.4 Ingest order_products_train data, 2.5 Ingest orders data, 3.0 Transform aisle, 3.1 Transform departments, 3.2 Transform products, 3.3 Transform order_products_prior, 3.4 Transform order_products_train, 3.5 Transform orders, 4.0 Load Dim Products, 4.1 Load Dim Customer, 4.2 Load Dim Date, 4.3 Load Dim Time, 4.4 Load Fact Orders
+        echo "✅ Workflow creado: WF_Supermarket"
         echo "✅ Tareas configuradas:"
-        echo "   - tarea1_notebook1 (ntbk_1)"
-        echo "   - tarea2_notebook2 (ntbk_2)"
-        echo "✅ Cluster existente: cluster_SD configurado"
+        echo "   - 1_Preparacion"
+        echo "   - 2_0_Ingest_aisle_data"
+        echo "   - 2_1_Ingest_departments_data"
+        echo "   - 2_2_Ingest_products_data"
+        echo "   - 2_3_Ingest_order_products_prior_data"
+        echo "   - 2_4_Ingest_order_products_train_data"
+        echo "   - 2_5_Ingest_order_data"
+        echo "   - 3_0_Transform_aisle"
+        echo "   - 3_1_Transform_departments"
+        echo "   - 3_2_Transform_products"
+        echo "   - 3_3_Transform_order_products_prior"
+        echo "   - 3_4_Transform_order_products_train"
+        echo "   - 3_5_Transform_orders"
+        echo "   - 4_0_Dim_Products"
+        echo "   - 4_1_Dim_Customer"
+        echo "   - 4_2_Dim_Date"
+        echo "   - 4_3_Dim_Time"
+        echo "   - 4_0_Dim_Products"
+        echo "✅ Cluster existente: Cl_Final_Project configurado"
         echo "🚀 Workflow ejecutado automáticamente"
         echo ""
         echo "🔗 Accede a tu workspace de Databricks para ver los resultados detallados"
