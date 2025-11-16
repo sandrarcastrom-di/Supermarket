@@ -1,14 +1,8 @@
 # 🛒 **Supermarket**
 
 ## _Arquitectura Medallon en Azure Databricks_
-<div align="center">
+<div align="left">
 
-
-
-
-
-
-![Uploading image.png…]()
 
 
 
